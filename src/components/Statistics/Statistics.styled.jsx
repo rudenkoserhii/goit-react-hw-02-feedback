@@ -8,7 +8,6 @@ export const StatisticsStyled = styled.ul`
     gap: ${p => p.theme.space[3]}px;
 
     width: ${p => p.theme.space[8]}px;
-    margin: ${p => p.theme.space[5]}px;
 
 `;
 

@@ -8,7 +8,6 @@ export const NotificationStyled = styled.p`
     text-align: center;
 
     width: ${p => p.theme.space[8]}px;
-    margin: ${p => p.theme.space[5]}px;
 
     animation: vibrate 0.3s linear infinite both;
 

@@ -7,7 +7,6 @@ export const FeedbackOptionsStyled = styled.ul`
     gap: ${p => p.theme.space[3]}px;
 
     width: ${p => p.theme.space[8]}px;
-    margin: ${p => p.theme.space[5]}px;
 
 `;
 
@@ -25,14 +24,38 @@ export const Button = styled.button`
     font-weight: ${p => p.theme.fontWeights.bold};
     font-size: ${p => p.theme.fontSizes.xs};
     text-transform: uppercase;
+
     color: ${p => p.theme.colors.white};
 
 
     cursor: pointer;
 
-    width: ${p => ((p.theme.space[8])/3)}px;
+    width: ${p => ((p.theme.space[8] - p.theme.space[3])/3)}px;
     height: ${p => p.theme.space[5]}px;
     padding: ${p => p.theme.space[4]}px;
+    box-shadow: ${p => p.theme.shadows.first};
+    border-radius: ${p => p.theme.radii.normal};
+    border: ${p => p.theme.borders.none};
+
+    :hover, :focus {animation: text-shadow-drop-center--2 0.6s both;
+
+    @-webkit-keyframes text-shadow-drop-center--2 {
+    0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        text-shadow: 0 0 18px rgba(0, 0, 0, 0.95);
+    }
+    }
+    @keyframes text-shadow-drop-center {
+    0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        text-shadow: 0 0 18px rgba(0, 0, 0, 0.95);
+    }
+    }
+};
 
     animation: text-shadow-drop-center 0.6s both;
     
@@ -53,5 +76,6 @@ export const Button = styled.button`
         text-shadow: 0 0 18px rgba(0, 0, 0, 0.65);
     }
     }
+
 
 `;

@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const SectionStyled = styled.section`
-    width: 100%;
+    width: ${p => p.theme.space[8]}px;
+    padding: ${p => p.theme.space[5]}px;
+
 
 `;
 
@@ -10,6 +12,6 @@ export const Title = styled.h2`
     text-align: center;
 
     width: ${p => p.theme.space[8]}px;
-    margin: ${p => p.theme.space[5]}px;
+    margin-bottom: ${p => p.theme.space[5]}px;
 
 `;
